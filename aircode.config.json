@@ -1,0 +1,41 @@
+{
+  "name": "lc",
+  "runtime": "node/v18",
+  "region": "US",
+  "envs": [
+    "FEISHU_BOT_WEB_HOOK_URL"
+  ],
+  "typescript": false,
+  "cronjobs": [
+    {
+      "name": "reset submit",
+      "startTime": 1706284500,
+      "endTime": 0,
+      "functions": [
+        "reset_submit.js"
+      ],
+      "repeatType": "day",
+      "repeatInterval": 1
+    },
+    {
+      "name": "Daily Push(8)",
+      "startTime": 1706056200,
+      "endTime": 0,
+      "functions": [
+        "daily_push.js"
+      ],
+      "repeatType": "day",
+      "repeatInterval": 1
+    },
+    {
+      "name": "Daily Push(12)",
+      "startTime": 1706025600,
+      "endTime": 0,
+      "functions": [
+        "daily_push.js"
+      ],
+      "repeatType": "day",
+      "repeatInterval": 1
+    }
+  ]
+}
